@@ -1,8 +1,8 @@
 export default {
-  displayName: 'angular-monorepo',
+  displayName: 'greeting',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/angular-monorepo',
+  coverageDirectory: '../../coverage/libs/greeting',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
