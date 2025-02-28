@@ -14,25 +14,16 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should be run test', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-
-    app.test = jasmine.createSpy('test').and.returnValue('dor');
-
-    expect(app.test('ba')).toEqual('dor');
-  });
-
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'host'`, () => {
+  it(`should have as title 'demo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('host');
+    expect(app.title).toEqual('demo');
   });
 
   it('should render title', fakeAsync(() => {
@@ -42,6 +33,6 @@ describe('AppComponent', () => {
     tick();
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Welcome host');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Welcome demo');
   }));
 });
